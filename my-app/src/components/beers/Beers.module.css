@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+
+}
+
+.beerImage {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8%;
+}
+
+
+.card {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    height: 400px;
+    margin: 20px;
+}
+
+
