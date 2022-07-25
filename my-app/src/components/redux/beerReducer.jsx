@@ -1,8 +1,12 @@
 
 const setBeers = 'SET_BEERS';
+const setCurrentPage = 'SET_CURRENT_PAGE';
+
 
 let initialState = {
     beersData: [],
+
+    currentPage: 1,
 };
 
 const beerReducer = (state = initialState, action) => {
@@ -12,8 +16,15 @@ const beerReducer = (state = initialState, action) => {
         case setBeers:
             return {
                 ...state,
-                beersData: [...state.beersData, ...action.beers]
+                beersData: action.beers
             }
+
+        case setCurrentPage:
+            return {
+                ...state,
+                currentPage: action.currentPage
+        }
+
                 
         default:
             return state;
@@ -22,5 +33,9 @@ const beerReducer = (state = initialState, action) => {
 
 
 export const setBeersAC = (beers) => ({ type: setBeers, beers });
+export const setCurrentPageAC = (currentPage) => ({ type: setCurrentPage, currentPage });
 
 export default beerReducer;
+
+
+
