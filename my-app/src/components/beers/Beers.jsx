@@ -45,6 +45,10 @@ class Beers extends React.Component {
         return (
             <div className={s.section}>
 
+                <div>
+                    <input className={s.serch} type='text'></input>
+                </div>
+
                 <div className={s.pagesCount}>
                     {pages.map(page => {
                         return (

@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import DetailPage from './DetailPage';
-import { setElementAC } from '../redux/detailReducer'
+import { setElementAC, resetDataAC } from '../redux/detailReducer'
 
 
 let mapStateToProps = (state) => {
@@ -18,6 +18,10 @@ let mapDispatchToProps = (dispatch) => {
         setElement: (element) => {
             dispatch(setElementAC(element))
         },
+
+        resetData: () => {
+            dispatch(resetDataAC())
+        }
 
        
     }
