@@ -22,7 +22,6 @@ let mapDispatchToProps = (dispatch) => {
         resetData: () => {
             dispatch(resetDataAC())
         }
-
        
     }
     

@@ -29,6 +29,8 @@ class Beers extends React.Component {
             })
     }
 
+    
+
 
     cropText = (text, size) => {
         if (text.length <= size) {
@@ -40,13 +42,20 @@ class Beers extends React.Component {
 
     render() {
         let pages = Array(10).fill(0).map((value, indexValue) => indexValue + 1);
-
+        
+        let searchForBeer = this.props.beersData.filter(beer => {
+            return beer.name.toLowerCase().includes(this.props.inputValue.toLowerCase())
+        })
 
         return (
             <div className={s.section}>
 
                 <div>
-                    <input className={s.serch} type='text'></input>
+                    <input 
+                        placeholder="search for beer..."  
+                        className={s.serch} type='text'
+                        onChange = {(e) => this.props.setInputValue(e.target.value)}>
+                    </input>
                 </div>
 
                 <div className={s.pagesCount}>
@@ -62,7 +71,7 @@ class Beers extends React.Component {
                 </div>
                 <div className={s.wrapper}>
                     {
-                        this.props.beersData.map(b => <NavLink key={b.id} className={s.link} to={`detail-page/${b.id}`}>
+                        searchForBeer.map(b => <NavLink key={b.id} className={s.link} to={`detail-page/${b.id}`}>
                             <div>
 
                                 <div className={s.card}>
@@ -87,3 +96,6 @@ class Beers extends React.Component {
 
 
 export default Beers;
+
+
+//setInputValue

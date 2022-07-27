@@ -1,19 +1,11 @@
-// import uniqid from 'uniqid';
-
 const setBeers = 'SET_BEERS';
 const setCurrentPage = 'SET_CURRENT_PAGE';
-// const setId = 'SET_ID';
-// const setName = 'SET_NAME';
-// const setDescription = 'SET_DESCRIPTION';
-// const setTagline = 'SET_TAG_LINE';
+const setInputValue = 'SET_INPUT_VALUE';
 
 let initialState = {
     beersData: [],
     currentPage: 1,
-    // id: 0,
-    // name: '',
-    // description: '',
-    // tagline: '',
+    inputValue: ''
 };
 
 const beerReducer = (state = initialState, action) => {
@@ -32,29 +24,13 @@ const beerReducer = (state = initialState, action) => {
                 currentPage: action.currentPage
         }
         
-        // case setId:
-        //     return {
-        //         ...state,
-        //         id: uniqid()
-        // }
+        case setInputValue:
+            return {
+                ...state,
+                inputValue: action.value
+        }
 
-        // case setName:
-        //     return {
-        //         ...state,
-        //         name: action.name
-        // }
-
-        // case setDescription:
-        //     return {
-        //         ...state,
-        //         description: action.description
-        // }
-
-        // case setTagline:
-        //     return {
-        //         ...state,
-        //         tagline: action.tagline
-        // }
+ 
                 
         default:
             return state;
@@ -64,10 +40,7 @@ const beerReducer = (state = initialState, action) => {
 
 export const setBeersAC = (beers) => ({ type: setBeers, beers });
 export const setCurrentPageAC = (currentPage) => ({ type: setCurrentPage, currentPage });
-// export const setIdAC = () => ({ type: setId });
-// export const setNameAC = (name) => ({ type: setName, name });
-// export const setDescriptionAC = (description) => ({ type: setDescription, description });
-// export const setTaglineAC = (tagline) => ({ type: setTagline, tagline });
+export const setInputValueAC = (value) => ({ type: setInputValue, value });
 
 
 export default beerReducer;
