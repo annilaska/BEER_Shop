@@ -1,12 +1,13 @@
 
 import { connect } from 'react-redux';
 import Beers from './Beers';
-import { setBeersAC, setCurrentPageAC} from '../redux/beerReducer';
+import { setBeersAC, setCurrentPageAC, setIdAC, setNameAC, setDescriptionAC, setTaglineAC } from '../redux/beerReducer';
 
 let mapStateToProps = (state) => {
     return {
         beersData: state.beerPage.beersData,
         currentPage: state.beerPage.currentPage,
+        id: state.beerPage.id
     }
 };
 
@@ -20,6 +21,22 @@ let mapDispatchToProps = (dispatch) => {
         setCurrentPage: (pageNumber) => {
             dispatch(setCurrentPageAC(pageNumber))
         },
+
+        // setId: () => {
+        //     dispatch(setIdAC())
+        // },
+
+        // setName: (name) => {
+        //     dispatch(setNameAC(name))
+        // },
+
+        // setDescription: (description) => {
+        //     dispatch(setDescriptionAC(description))
+        // },
+
+        // setTagline: (tagline) => {
+        //     dispatch(setTaglineAC(tagline))
+        // },
 
     }
     

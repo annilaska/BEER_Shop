@@ -2,6 +2,7 @@ import React from "react";
 import s from './Beers.module.css';
 import * as axios from 'axios';
 import beerImage from '../../assets/pint-of-beer-svgrepo-com.svg'
+import { NavLink } from "react-router-dom";
 
 
 
@@ -31,14 +32,14 @@ class Beers extends React.Component {
 
     cropText = (text, size) => {
         if (text.length <= size) {
-          return text;
+            return text;
         } else {
-          return text.substr(0, size) + "...";
+            return text.substr(0, size) + "...";
         }
-      }
+    }
 
     render() {
-        let pages = Array(10).fill(0).map( (value, indexValue) => indexValue + 1);
+        let pages = Array(10).fill(0).map((value, indexValue) => indexValue + 1);
 
 
         return (
@@ -57,18 +58,20 @@ class Beers extends React.Component {
                 </div>
                 <div className={s.wrapper}>
                     {
-                        this.props.beersData.map(u => <div key={u.id} >
+                        this.props.beersData.map(b => <NavLink key={b.id} className={s.link} to={`detail-page/${b.id}`}>
+                            <div>
 
-                            <div className={s.card}>
-                                <div className={s.imageWrapper}>
-                                    <img className={s.beerImage} src={u.image_url != null ? u.image_url : beerImage} alt=''></img>
-                                </div>
-                                <div className={s.inform}>
-                                    <div className={s.beersName}>{u.name}</div>
-                                    <div>{this.cropText(u.description, 140)}</div>
+                                <div className={s.card}>
+                                    <div className={s.imageWrapper}>
+                                        <img className={s.beerImage} src={b.image_url != null ? b.image_url : beerImage} alt=''></img>
+                                    </div>
+                                    <div className={s.inform}>
+                                        <div className={s.beersName}>{b.name}</div>
+                                        <div>{this.cropText(b.description, 140)}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>)
+                        </NavLink>)
                     }
                 </div>
             </div>
