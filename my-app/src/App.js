@@ -10,7 +10,7 @@ import DetailPageContainer from './components/detail-page/DetailPageContainer';
 const App = ({ store }) => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="app-wrapper">
         
           <Routes>
