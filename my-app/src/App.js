@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import BeersContainer from './components/beers/BeersContainer';
 import DetailPageContainer from './components/detail-page/DetailPageContainer';
 
@@ -10,7 +10,7 @@ import DetailPageContainer from './components/detail-page/DetailPageContainer';
 const App = ({ store }) => {
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div className="app-wrapper">
         
           <Routes>
@@ -19,7 +19,7 @@ const App = ({ store }) => {
           </Routes>
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
