@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/test_task_ViCueSoft/static/css/main.163957a5.css",
+    "main.css": "/test_task_ViCueSoft/static/css/main.91e4fafe.css",
     "main.js": "/test_task_ViCueSoft/static/js/main.a427d3a5.js",
     "static/js/787.28cb0dcd.chunk.js": "/test_task_ViCueSoft/static/js/787.28cb0dcd.chunk.js",
     "static/media/pint-of-beer-svgrepo-com.svg": "/test_task_ViCueSoft/static/media/pint-of-beer-svgrepo-com.f1cd372f490d6cd32e42380ac764151a.svg",
     "index.html": "/test_task_ViCueSoft/index.html",
-    "main.163957a5.css.map": "/test_task_ViCueSoft/static/css/main.163957a5.css.map",
+    "main.91e4fafe.css.map": "/test_task_ViCueSoft/static/css/main.91e4fafe.css.map",
     "main.a427d3a5.js.map": "/test_task_ViCueSoft/static/js/main.a427d3a5.js.map",
     "787.28cb0dcd.chunk.js.map": "/test_task_ViCueSoft/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.163957a5.css",
+    "static/css/main.91e4fafe.css",
     "static/js/main.a427d3a5.js"
   ]
 }
