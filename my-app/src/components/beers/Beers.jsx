@@ -97,5 +97,3 @@ class Beers extends React.Component {
 
 export default Beers;
 
-
-//setInputValue

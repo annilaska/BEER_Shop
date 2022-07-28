@@ -17,10 +17,10 @@ const detailReducer = (state = initialState, action) => {
             }
 
         case resetData:
-        return {
-            ...state,
-            detailBeersData: []
-        }
+            return {
+                ...state,
+                detailBeersData: []
+            }
 
         default:
             return state;
