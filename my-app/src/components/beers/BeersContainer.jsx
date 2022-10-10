@@ -1,35 +1,21 @@
 
 import { connect } from 'react-redux';
 import Beers from './Beers';
-import { setBeersAC, setCurrentPageAC, setInputValueAC } from '../redux/beerReducer';
+import { setBeersT, setCurrentPage, setInputValue } from '../redux/beerReducer';
 
 let mapStateToProps = (state) => {
+ 
     return {
         beersData: state.beerPage.beersData,
         currentPage: state.beerPage.currentPage,
-        inputValue: state.beerPage.inputValue
+        inputValue: state.beerPage.inputValue,
+        pageSize: state.beerPage.pageSize
     }
 };
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-  
-        setBeers: (beers) => {
-            dispatch(setBeersAC(beers))
-        },
 
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageAC(pageNumber))
-        },
-
-        setInputValue: (value) => {
-            dispatch(setInputValueAC(value))
-        }
-
-    }
-    
-}
-
-const BeersContainer = connect(mapStateToProps, mapDispatchToProps)(Beers);
+const BeersContainer = connect(mapStateToProps, { 
+    setBeersT, setInputValue, setCurrentPage 
+})(Beers);
 
 export default BeersContainer;

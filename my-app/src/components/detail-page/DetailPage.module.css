@@ -6,15 +6,16 @@
 
 
 .description, .tagline, .food_pairing, .abv, .name, .closeButton {
-    color: #FFFFFF;
+    color: #606366;
 }
 
-.name, .closeButton{
+.name {
     font-size: 24px;
 }
 
 
 .closeButton {
+    font-size: 14px;
     background: none;
     border: none;
 }
@@ -24,18 +25,17 @@
 }
 
 .imageBlock {
-    height: 500px;
+    height: 400px;
 }
-
 
 .image {
     background-size: cover;
     background-position: center center;
-    height: 100%;
+    height: 60%;
 }
 
 .tagline {
-    margin-top: 100px;
+    margin-top: 50px;
 } 
 
 .food_pairing {
@@ -47,11 +47,11 @@
 }
 
 .abv {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .topBlock {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .topBlock, .botomBlock, .buttonBlock {
@@ -65,10 +65,14 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 40px;
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .informBlock {
     display: flex;
