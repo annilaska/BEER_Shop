@@ -1,4 +1,4 @@
-import { beersApi } from '../../api/Api';
+import { beersApi } from '../api/Api';
 
 const setElementConst = 'SET_ELEMENT';
 const resetDataConst = 'RESET_DATA';

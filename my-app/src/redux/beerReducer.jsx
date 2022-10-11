@@ -1,4 +1,4 @@
-import { beersApi } from '../../api/Api';
+import { beersApi } from '../api/Api';
 
 
 const setBeersConst = 'SET_BEERS';

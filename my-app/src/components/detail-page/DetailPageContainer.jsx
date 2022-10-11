@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import DetailPage from './DetailPage';
-import { setBeersCardT, resetData } from '../redux/detailReducer'
+import { setBeersCardT, resetData } from '../../redux/detailReducer';
 
 
 let mapStateToProps = (state) => {

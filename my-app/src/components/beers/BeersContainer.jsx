@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import Beers from './Beers';
-import { setBeersT, setCurrentPage, setInputValue } from '../redux/beerReducer';
+import { setBeersT, setCurrentPage, setInputValue } from '../../redux/beerReducer';
 
 let mapStateToProps = (state) => {
  
