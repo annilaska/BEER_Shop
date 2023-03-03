@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
-import store from './redux/reduxStore';
+import { store } from './store/index';
 import App from './App';
 import { Provider } from 'react-redux';
 
@@ -20,6 +19,6 @@ import { Provider } from 'react-redux';
 
 
 
-reportWebVitals();
+
 
 

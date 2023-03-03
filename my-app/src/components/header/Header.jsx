@@ -1,32 +1,29 @@
+import React from "react";
+import { IconButton, Toolbar, Typography } from "@mui/material";
+import  { AppBar, Box }  from "@mui/material"
+import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 
-import { IconButton, Toolbar, Typography } from "@material-ui/core";
-import  AppBar  from "@material-ui/core/AppBar"
-import { makeStyles } from '@material-ui/core/styles';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-const useStyles = makeStyles({
-    toolbarStyle: {
-       display: 'flex',
-       flexDirection: 'row',
-       flexWrap: 'nowrap',
-       justifyContent: 'space-between'
-   }
-});
-
-const Header = () => {
-    const classes = useStyles();
-
+const Header = ({ handleBasket }) => {
+  
     return (
-        <AppBar position="static">
-            <Toolbar className={classes.toolbarStyle}>
-                <Typography variant="h6" component="span" >
-                    BEER Shop
-                </Typography>
-                <IconButton color="inherit">
-                    <ShoppingCartIcon />
-                </IconButton>
-            </Toolbar>
-        </AppBar>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                         BEER Shop
+                    </Typography>
+               
+                    <IconButton 
+                        color="inherit"
+                        onClick={handleBasket}
+                    >
+                        <LocalGroceryStoreIcon />
+                    </IconButton>
+           
+                </Toolbar>
+            </AppBar>
+        </Box>
     )
 };
 

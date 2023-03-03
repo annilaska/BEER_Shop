@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashRouter, Routes, Route } from "react-router-dom";
-import BeersContainer from './components/beers/BeersContainer';
-import DetailPageContainer from './components/detail-page/DetailPageContainer';
+import Beers from './components/beers/Beers';
+import DetailPage from './components/detail-page/DetailPage';
 import Header from './components/header/Header';
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
+import { Basket } from "./components/basket/Basket";
 
+const App = () => {
 
-const App = ({ store }) => {
-
+  const [basketOpen, setBasketOpen] = useState(false)
   return (
     <HashRouter>
-      <Header />
+      <Header handleBasket={() => setBasketOpen(true)}/>
       <Container>
           <Routes>
-            <Route path='/' element={<BeersContainer />} />
-            <Route path='detail-page/:id' element={<DetailPageContainer />} />
+            <Route path='/' element={<Beers />} />
+            <Route path='detail-page/:id' element={<DetailPage />} />
           </Routes>
-      </Container>   
+      </Container> 
+      <Basket cardOpen={basketOpen} cardClose={() => setBasketOpen(false)} />
     </HashRouter>
   );
 }

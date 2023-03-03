@@ -6,6 +6,7 @@ const instance = axios.create({
 
 
 export const beersApi = {
+    
     getAllBeers(pageNumber) {
         return instance.get(`?page=${pageNumber}`)
         .then(response => response.data)

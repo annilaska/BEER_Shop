@@ -76,7 +76,9 @@
     height: 50%;
 }
 
-.link {
-    text-decoration: none;
-    color: inherit;
+.linkButton {
+    background: none;
+    border: none;
+    color: rgb(41, 76, 232);
+    font-weight: 600;
 }

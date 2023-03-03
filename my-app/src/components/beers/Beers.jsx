@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from './Beers.module.css';
-import { useEffect } from "react";
-import { TextField } from "@material-ui/core";
+
+import { TextField } from "@mui/material";
 import Paginator from "./Paginator";
 import Cards from "./Cards";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCardsThunk } from '../../store/slices/collectionSlice'
 
-const Beers = ({ setBeersT, beersData, inputValue, setInputValue, ...props }) => {
+
+const Beers = () => {
+
+    const [currentPage, setcurrentPage] = useState(1)
+    const [inputValue, setInputValue] = useState('')
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        setBeersT(props.currentPage)
-    }, [props.currentPage])
+        dispatch(fetchCardsThunk(currentPage))
+    }, [dispatch])
 
+    const beersData = useSelector(state => state.collectionSection.beersData)
+   
     return (
         <div className={s.section}>
             <TextField
@@ -19,7 +28,7 @@ const Beers = ({ setBeersT, beersData, inputValue, setInputValue, ...props }) =>
                 fullWidth
                 onChange={(e) => setInputValue(e.target.value)} 
             />
-            <Paginator setBeersT={setBeersT} currentPage={props.currentPage} />
+            <Paginator dispatch={dispatch} currentPage={currentPage} setcurrentPage={setcurrentPage} /> 
             <Cards beersData={beersData} inputValue={inputValue} />
         </div>
     )
