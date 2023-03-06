@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Beers.module.css';
+import './Beers.scss';
 import { fetchCardsThunk } from '../../store/slices/collectionSlice'
 
 const Paginator = ({dispatch, currentPage, setcurrentPage}) => {
@@ -12,10 +12,10 @@ const Paginator = ({dispatch, currentPage, setcurrentPage}) => {
     let pages = Array(13).fill(0).map((value, indexValue) => indexValue + 1);
 
     return (
-        <div className={s.pagesCount}>
+        <div className='pagesCount'>
             {pages.map(page => {
                 return (
-                    <div key={page} className={currentPage === page ? s.selectedPage : s.number}
+                    <div key={page} className={currentPage === page ? 'selectedPageNumber' : 'pageNumber'}
                         onClick={(e) => {
                             onPageChanged(page)
                         }}

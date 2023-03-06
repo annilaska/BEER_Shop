@@ -2,9 +2,11 @@ import React from "react";
 import { IconButton, Toolbar, Typography } from "@mui/material";
 import  { AppBar, Box }  from "@mui/material"
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-
+import Badge, { BadgeProps } from '@mui/material/Badge';
+import { useSelector } from "react-redux";
 
 const Header = ({ handleBasket }) => {
+    const ordersCount = useSelector(state => state.orderSection.orderData)
   
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -18,7 +20,12 @@ const Header = ({ handleBasket }) => {
                         color="inherit"
                         onClick={handleBasket}
                     >
-                        <LocalGroceryStoreIcon />
+                        <Badge
+                            badgeContent={ordersCount.length}
+                            color="secondary"
+                        >
+                            <LocalGroceryStoreIcon />
+                        </Badge>
                     </IconButton>
            
                 </Toolbar>

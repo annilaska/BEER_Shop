@@ -1,0 +1,97 @@
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    color: #606366;
+    height: 70vh;
+    justify-content: space-between;
+    @include tablet {
+        justify-content: center;
+    }
+    
+    .closeBtn {
+        align-self: flex-end;
+        margin: .5rem 1rem 0 0;
+        text-decoration: none;
+    }
+
+    .botomBlock {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        height: 70%;
+        @include mobile {
+            margin-top: 1rem;
+            height: 80%;
+        }
+
+        .imageBlock {
+            width: 50%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .image {
+                background-size: cover;
+                background-position: center center;
+                height: 60%;
+            }
+        }
+
+        .informBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            justify-content: space-evenly;
+            font-size: .9rem;
+            @include tablet {
+                font-size: .7rem;
+                justify-content: space-around;
+            }
+
+            .description {
+                font-style: italic;
+            }
+            .basketBtn {
+                background: none;
+                border: none;
+                color:rgba(15, 55, 232, 0.8);
+                font-weight: 600;
+                font-size: .9rem;
+                &:hover {
+                    color: rgba(15, 55, 232);
+                }
+                @include tablet {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    
+}
+

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import s from './Beers.module.css';
+import './Beers.scss';
 
 import { TextField } from "@mui/material";
 import Paginator from "./Paginator";
@@ -21,7 +21,7 @@ const Beers = () => {
     const beersData = useSelector(state => state.collectionSection.beersData)
    
     return (
-        <div className={s.section}>
+        <div className='section'>
             <TextField
                 type='search'
                 label='search'

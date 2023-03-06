@@ -1,0 +1,46 @@
+@mixin mobile {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+  
+.basket {
+    width: 25rem;
+    @include tablet {
+        width: 18rem;
+    }
+    @include mobile {
+        width: 15rem;
+    }
+
+    .basketItem {
+        display: flex; 
+        justify-content: space-between;
+
+        &-title {
+            flex-grow: 2;
+            @include tablet {
+                font-size: .9rem;
+            }
+            @include mobile {
+                font-size: .7rem;
+            }
+        }
+
+        .count {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+    
+}
+
+
