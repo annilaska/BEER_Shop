@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://annilaska.github.io/test-task/",
+  "homepage": "https://annilaska.github.io/BEER_Shop/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
