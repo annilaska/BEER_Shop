@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.cac49dbe.css",
-    "main.js": "/test-task/static/js/main.184f1aff.js",
-    "static/media/pint-of-beer-svgrepo-com.svg": "/test-task/static/media/pint-of-beer-svgrepo-com.f1cd372f490d6cd32e42380ac764151a.svg",
-    "index.html": "/test-task/index.html",
-    "main.cac49dbe.css.map": "/test-task/static/css/main.cac49dbe.css.map",
-    "main.184f1aff.js.map": "/test-task/static/js/main.184f1aff.js.map"
+    "main.css": "/BEER_Shop/static/css/main.cac49dbe.css",
+    "main.js": "/BEER_Shop/static/js/main.f4ba8e11.js",
+    "static/media/pint-of-beer-svgrepo-com.svg": "/BEER_Shop/static/media/pint-of-beer-svgrepo-com.f1cd372f490d6cd32e42380ac764151a.svg",
+    "index.html": "/BEER_Shop/index.html",
+    "main.cac49dbe.css.map": "/BEER_Shop/static/css/main.cac49dbe.css.map",
+    "main.f4ba8e11.js.map": "/BEER_Shop/static/js/main.f4ba8e11.js.map"
   },
   "entrypoints": [
     "static/css/main.cac49dbe.css",
-    "static/js/main.184f1aff.js"
+    "static/js/main.f4ba8e11.js"
   ]
 }
